@@ -1,7 +1,0 @@
-build/
-.dart_tool/
-.packages
-.idea/
-.vscode/
-local.properties
-

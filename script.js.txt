@@ -1,0 +1,21 @@
+// ?????? ? ?????? ?? faq.json ?? ??? ????
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("faq.json")
+    .then(response => response.json())
+    .then(data => {
+      const faqSection = document.getElementById("faq");
+      data.forEach(item => {
+        const question = document.createElement("h3");
+        question.textContent = "????: " + item.question;
+
+        const answer = document.createElement("p");
+        answer.textContent = "????: " + item.answer;
+
+        faqSection.appendChild(question);
+        faqSection.appendChild(answer);
+      });
+    })
+    .catch(error => {
+      console.error("?????? ??? ???? ??? ?????:", error);
+    });
+});
