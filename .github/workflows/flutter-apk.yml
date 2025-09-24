@@ -18,6 +18,9 @@ jobs:
       with:
         flutter-version: '3.13.0'
 
+    - name: Run flutter doctor
+      run: flutter doctor
+
     - name: Get dependencies
       run: flutter pub get
 
