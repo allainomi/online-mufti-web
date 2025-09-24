@@ -20,18 +20,15 @@ jobs:
 
     - name: Run flutter doctor
       run: flutter doctor
-      working-directory: online_mufti_flutter
 
     - name: Get dependencies
       run: flutter pub get
-      working-directory: online_mufti_flutter
 
     - name: Build APK
       run: flutter build apk --release
-      working-directory: online_mufti_flutter
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: online-mufti-apk
-        path: online_mufti_flutter/build/app/outputs/flutter-apk/app-release.apk
+        path: build/app/outputs/flutter-apk/app-release.apk
